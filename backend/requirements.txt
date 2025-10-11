@@ -1,0 +1,25 @@
+# Fichier: backend/requirements.txt
+# Dépendances Python pour le projet AlphaStriker
+
+# --- Core Web Framework & Server ---
+fastapi               # Framework pour l'API du backend, rapide et moderne.
+uvicorn[standard]     # Serveur ASGI pour exécuter FastAPI, avec les extras pour la performance.
+python-dotenv         # Pour charger les variables d'environnement depuis le fichier .env.
+
+# --- Solana & Blockchain Interaction ---
+solana==0.31.0        # Librairie officielle pour interagir avec la blockchain Solana. Version figée pour la stabilité.
+solders               # Dépendance de la librairie `solana` pour la sérialisation rapide.
+websockets            # Pour les connexions en temps réel (ex: avec les nœuds Solana WSS).
+
+# --- IA & API Calls ---
+openai                # Client utilisé pour communiquer avec les API compatibles (OpenRouter/Gemini).
+requests              # Pour effectuer des appels HTTP simples à des APIs externes (honeypot, etc.).
+
+# --- Utilitaires & Logging ---
+loguru                # Pour un système de logs avancé, coloré et plus lisible.
+numpy                 # Pour les calculs numériques, souvent utilisé dans l'analyse de trading.
+psutil                # Pour la surveillance des processus système (CPU, mémoire, statut des services).
+pandas                # Pour l'analyse de données, essentiel pour l'optimiseur de stratégie (`ai_auto_optimizer.py`).
+tabulate              # Pour formater les données en tableaux lisibles dans les logs.
+aiohttp               # Client HTTP asynchrone pour les requêtes non bloquantes (ex: get_public_ip).
+base58                # Pour l'encodage/décodage des clés privées Solana.
